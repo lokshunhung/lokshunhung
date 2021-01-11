@@ -1,6 +1,6 @@
 export const LHandDown = () => {
     return (
-        <g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+        <g className="ld">
             <path
                 d={`M5291 4163 c-58 -60 -112 -131 -146 -192 -16 -29 -20 -59 -23 -156
                 -4 -158 10 -189 116 -252 90 -55 136 -63 349 -63 150 0 170 2 255 28 51 16
