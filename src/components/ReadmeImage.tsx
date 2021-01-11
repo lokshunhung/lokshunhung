@@ -9,6 +9,7 @@ export const ReadmeImage = ({ style }: ReadmeImageProps) => {
         <Svg viewBoxWidth={dimensions.width} viewBoxHeight={dimensions.height} style={style}>
             <style>{require('bundle-text:./ReadmeImage.scss')}</style>
             <rect id="bg" />
+            <line x1={0} y1={475} x2={1000} y2={710} strokeWidth={10} stroke="#000" />
             <CatHead id="head" />
             <LPawUp id="l-paw-up" />
             <LPawDown id="l-paw-down" />
