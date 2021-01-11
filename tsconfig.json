@@ -11,7 +11,12 @@
         "forceConsistentCasingInFileNames": true,
 
         "moduleResolution": "Node",
+        "resolveJsonModule": true,
         "allowSyntheticDefaultImports": false,
-        "esModuleInterop": false
+        "esModuleInterop": false,
+
+        "paths": {
+            "~/src/*": ["./src/*"]
+        }
     }
 }
