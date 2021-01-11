@@ -1,6 +1,8 @@
-export const LHandDown = () => {
+import { CatProps } from './types';
+
+export const LHandDown = ({ id }: CatProps) => {
     return (
-        <g className="ld">
+        <g id={id} className="ld">
             <path
                 d={`M5291 4163 c-58 -60 -112 -131 -146 -192 -16 -29 -20 -59 -23 -156
                 -4 -158 10 -189 116 -252 90 -55 136 -63 349 -63 150 0 170 2 255 28 51 16

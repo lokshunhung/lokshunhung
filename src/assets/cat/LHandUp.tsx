@@ -1,6 +1,8 @@
-export const LHandUp = () => {
+import { CatProps } from './types';
+
+export const LHandUp = ({ id }: CatProps) => {
     return (
-        <g className="ld">
+        <g id={id} className="ld">
             <path
                 d={`M5664 4914 c-49 -37 -101 -83 -116 -103 -33 -47 -62 -143 -78 -258
                 -23 -166 1 -535 40 -639 6 -15 22 -24 62 -32 29 -5 55 -9 57 -6 2 2 -2 23 -8
