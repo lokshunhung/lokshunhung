@@ -34,8 +34,8 @@
 }
 
 // beat:       | 0 - 1 - 2 - 3 - 4 - 5 - 6 - 7 - |
-// right-hand    U       D U D U         D U
-// left-hand:    D U D U         D U D U
+// right-paw     U       D U D U         D U
+// left-paw:     D U D U         D U D U
 
-@include pattern(r-hand, (0, 2.5, 3.5, 6.5), (2, 3, 6));
-@include pattern(l-hand, (0.5, 1.5, 4.5, 5.5), (0, 1, 4, 5));
+@include pattern(r-paw, (0, 2.5, 3.5, 6.5), (2, 3, 6));
+@include pattern(l-paw, (0.5, 1.5, 4.5, 5.5), (0, 1, 4, 5));

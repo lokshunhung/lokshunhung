@@ -1,4 +1,4 @@
-import { CatHead, LHandDown, LHandUp, RHandDown, RHandUp } from '~/src/assets/cat';
+import { CatHead, LPawDown, LPawUp, RPawDown, RPawUp } from '~/src/assets/cat';
 import { dimensions } from '~/src/defs/values';
 import { Svg } from './Svg';
 
@@ -10,10 +10,10 @@ export const ReadmeImage = ({ style }: ReadmeImageProps) => {
             <style>{require('bundle-text:./ReadmeImage.scss')}</style>
             <rect id="bg" />
             <CatHead id="head" />
-            <LHandUp id="l-hand-up" />
-            <LHandDown id="l-hand-down" />
-            <RHandUp id="r-hand-up" />
-            <RHandDown id="r-hand-down" />
+            <LPawUp id="l-paw-up" />
+            <LPawDown id="l-paw-down" />
+            <RPawUp id="r-paw-up" />
+            <RPawDown id="r-paw-down" />
         </Svg>
     );
 };

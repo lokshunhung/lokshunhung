@@ -1,6 +1,6 @@
 import { CatProps } from './types';
 
-export const RHandDown = ({ id }: CatProps) => {
+export const RPawDown = ({ id }: CatProps) => {
     return (
         <g id={id} className="ld">
             <path

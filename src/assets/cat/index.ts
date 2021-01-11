@@ -1,5 +1,5 @@
 export { CatHead } from './CatHead';
-export { LHandDown } from './LHandDown';
-export { LHandUp } from './LHandUp';
-export { RHandDown } from './RHandDown';
-export { RHandUp } from './RHandUp';
+export { LPawDown } from './LPawDown';
+export { LPawUp } from './LPawUp';
+export { RPawDown } from './RPawDown';
+export { RPawUp } from './RPawUp';
