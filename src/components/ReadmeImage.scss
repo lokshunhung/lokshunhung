@@ -1,4 +1,5 @@
-@import '~/src/assets/cat';
+@use '~/src/assets/cat';
+@use './hands';
 
 #bg {
     width: 100%;
