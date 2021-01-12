@@ -6,8 +6,13 @@
     fill: values.colors(bg);
 }
 
+#table {
+    stroke: values.colors(outline);
+    stroke-width: 10px;
+}
+
 #sig {
-    fill: values.colors(cat-outline);
+    fill: values.colors(outline);
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.5em;
     font-weight: bolder;

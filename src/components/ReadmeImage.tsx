@@ -19,7 +19,7 @@ export const ReadmeImage = ({ style, accessoryType = 'Taiko' }: ReadmeImageProps
         <Svg viewBoxWidth={dimensions.width} viewBoxHeight={dimensions.height} style={style}>
             <style>{inlineStyleSheet}</style>
             <rect id="bg" />
-            <line x1={0} y1={475} x2={1000} y2={710} strokeWidth={10} stroke="#000" />
+            <line id="table" x1={0} y1={475} x2={1000} y2={710} />
 
             <BeforeComponent />
 

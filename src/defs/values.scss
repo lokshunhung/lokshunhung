@@ -17,10 +17,15 @@ $durations: (
 
 $colors: (
     bg: #fff,
+    outline: #000,
     cat-bg: #fff,
     cat-outline: #000,
     cat-toe-bean: #fd9ba1,
     impact: #b11026,
+    tk-batter: #f84727,
+    tk-body: #68c0c0,
+    tk-rim: #fff,
+    tk-outline: #000,
 );
 @function colors($id) {
     @return map.get($colors, $id);

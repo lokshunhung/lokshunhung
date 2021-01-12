@@ -1,3 +1,24 @@
+@use '~/src/defs/values';
+
 .accTaiko {
     transform: scale(2);
+
+    .body {
+        fill: values.colors(tk-body);
+    }
+
+    .rim {
+        fill: values.colors(tk-rim);
+        stroke: values.colors(tk-outline);
+    }
+
+    .batter {
+        fill: values.colors(tk-batter);
+    }
+
+    .bodyOutline,
+    .topOutline {
+        stroke: values.colors(tk-outline);
+        fill: none;
+    }
 }
