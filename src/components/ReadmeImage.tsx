@@ -24,10 +24,10 @@ export const ReadmeImage = ({ style, accessoryType = 'Taiko' }: ReadmeImageProps
             <BeforeComponent />
 
             <CatHead id="head" />
-            <LPawUp id="l-paw-up" />
-            <LPawDown id="l-paw-down" />
-            <RPawUp id="r-paw-up" />
-            <RPawDown id="r-paw-down" />
+            <LPawUp id="lPawUp" />
+            <LPawDown id="lPawDown" />
+            <RPawUp id="rPawUp" />
+            <RPawDown id="rPawDown" />
 
             <AfterComponent />
 

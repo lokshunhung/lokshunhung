@@ -6,7 +6,7 @@
 }
 
 // prettier-ignore
-@mixin beat-keyframe($ident, $show-rhythm, $hide-rhythm) {
+@mixin beatKeyframe($ident, $show-rhythm, $hide-rhythm) {
     animation: $ident values.durations(anim-tick) step-end infinite;
     @keyframes #{$ident} {
         $show: ();
@@ -24,11 +24,11 @@
 }
 
 @mixin pattern($ident, $up-rhythm, $down-rhythm) {
-    ##{$ident}-up {
-        @include beat-keyframe(#{$ident}-up, $up-rhythm, $down-rhythm);
+    ##{$ident}Up {
+        @include beatKeyframe(#{$ident}Up, $up-rhythm, $down-rhythm);
     }
-    ##{$ident}-down {
-        @include beat-keyframe(#{$ident}-down, $down-rhythm, $up-rhythm);
+    ##{$ident}Down {
+        @include beatKeyframe(#{$ident}Down, $down-rhythm, $up-rhythm);
     }
 }
 
@@ -36,5 +36,5 @@
 // right-paw     U       D U D U         D U
 // left-paw:     D U D U         D U D U
 
-@include pattern(r-paw, (0, 2.5, 3.5, 6.5), (2, 3, 6));
-@include pattern(l-paw, (0.5, 1.5, 4.5, 5.5), (0, 1, 4, 5));
+@include pattern(rPaw, (0, 2.5, 3.5, 6.5), (2, 3, 6));
+@include pattern(lPaw, (0.5, 1.5, 4.5, 5.5), (0, 1, 4, 5));

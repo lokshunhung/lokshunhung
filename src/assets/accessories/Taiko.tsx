@@ -1,6 +1,6 @@
 export const Taiko = () => {
     return (
-        <g className="acc-taiko">
+        <g className="accTaiko">
             <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="-147" y="283" width="485" height="670">
                 <rect width="340" height="602" transform="matrix(0.965926 0.258819 0.258819 -0.965926 -147 864.784)" />
             </mask>

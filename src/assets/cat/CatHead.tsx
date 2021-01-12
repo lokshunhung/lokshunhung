@@ -2,7 +2,7 @@ import { CatProps } from './types';
 
 export const CatHead = ({ id }: CatProps) => {
     return (
-        <g id={id} className="line-draw">
+        <g id={id} className="lineDraw">
             <path
                 d={`M4279 6752 c-21 -9 -302 -303 -338 -354 -14 -21 -32 -38 -39 -38 -29
                 0 -292 -93 -376 -133 -230 -110 -582 -351 -830 -572 -38 -33 -74 -64 -82 -68
