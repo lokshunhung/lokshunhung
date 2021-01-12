@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import { ReadmeImage } from '~/src/components/ReadmeImage';
 import { dimensions } from '~/src/defs/values';
 
-const styles = `
+const inlineStyleSheet = `
     body {
         margin: 1em;
         padding: 0;
@@ -16,7 +16,7 @@ const DevPreviewApp = () => (
         <main>
             <ReadmeImage style={dimensions} />
         </main>
-        <style>{styles}</style>
+        <style>{inlineStyleSheet}</style>
     </>
 );
 
