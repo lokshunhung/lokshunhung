@@ -24,6 +24,9 @@ export const ReadmeImage = ({ style }: ReadmeImageProps) => {
             <LPawDown id="l-paw-down" />
             <RPawUp id="r-paw-up" />
             <RPawDown id="r-paw-down" />
+            <text id="sig" x={950} y={950}>
+                github.com/lokshunhung
+            </text>
         </Svg>
     );
 };
