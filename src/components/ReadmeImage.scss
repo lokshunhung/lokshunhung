@@ -1,8 +1,11 @@
+@use 'sass:map';
+@use '~/src/defs/values';
+
 @use '~/src/assets/cat';
 @use './paws';
 
 #bg {
     width: 100%;
     height: 100%;
-    fill: #fff;
+    fill: map.get(values.$colors, bg);
 }
