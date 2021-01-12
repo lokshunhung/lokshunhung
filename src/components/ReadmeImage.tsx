@@ -5,7 +5,7 @@ import { Svg } from './Svg';
 
 type ReadmeImageProps = { style?: React.CSSProperties; accessoryType?: AccessoryType };
 
-export const ReadmeImage = ({ style, accessoryType = 'EmergencyButton' }: ReadmeImageProps) => {
+export const ReadmeImage = ({ style, accessoryType = 'Taiko' }: ReadmeImageProps) => {
     const { inlineStyles, BeforeComponent, AfterComponent } = getAccessory(accessoryType);
 
     const inlineStyleSheet = [

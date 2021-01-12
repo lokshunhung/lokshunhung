@@ -1,7 +1,8 @@
 import { Bongo } from './Bongo';
 import { EmergencyButton, EmergencyButtonText } from './EmergencyButton';
+import { Taiko } from './Taiko';
 
-export type AccessoryType = 'Bongo' | 'EmergencyButton';
+export type AccessoryType = 'Bongo' | 'EmergencyButton' | 'Taiko';
 
 export type AccessorySet = {
     inlineStyles: string;
@@ -24,6 +25,12 @@ export const getAccessory = (type: AccessoryType): AccessorySet => {
                 inlineStyles: require('bundle-text:./EmergencyButton.scss'),
                 BeforeComponent: EmergencyButtonText,
                 AfterComponent: EmergencyButton,
+            };
+        case 'Taiko':
+            return {
+                inlineStyles: require('bundle-text:./Taiko.scss'),
+                BeforeComponent: Taiko,
+                AfterComponent: NullComponent,
             };
     }
 };
