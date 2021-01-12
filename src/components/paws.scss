@@ -1,5 +1,4 @@
 @use 'sass:list';
-@use 'sass:map';
 @use '~/src/defs/values';
 
 @function beat($i) {
@@ -8,7 +7,7 @@
 
 // prettier-ignore
 @mixin beat-keyframe($ident, $show-rhythm, $hide-rhythm) {
-    animation: $ident map.get(values.$durations, anim-tick) step-end infinite;
+    animation: $ident values.durations(anim-tick) step-end infinite;
     @keyframes #{$ident} {
         $show: ();
         @each $note in $show-rhythm {

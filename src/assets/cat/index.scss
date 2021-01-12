@@ -1,23 +1,22 @@
-@use 'sass:map';
 @use '~/src/defs/values';
 
 // Line Drawing
 .line-draw {
     transform: translate(0, 1000px) scale(0.1, -0.1);
-    fill: map.get(values.$colors, cat-outline);
+    fill: values.colors(cat-outline);
 }
 
 // Toe Beans
 .toe-bean {
-    fill: map.get(values.$colors, cat-toe-bean);
+    fill: values.colors(cat-toe-bean);
 }
 
 // Paw Background
 .paw-bg {
-    fill: map.get(values.$colors, cat-bg);
+    fill: values.colors(cat-bg);
 }
 
 // Paw Impact Lines
 .impact {
-    fill: map.get(values.$colors, impact);
+    fill: values.colors(impact);
 }

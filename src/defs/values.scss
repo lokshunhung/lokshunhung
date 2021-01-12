@@ -1,11 +1,19 @@
+@use 'sass:map';
+
 $dimensions: (
     width: 1000,
     height: 1000,
 );
+@function dimensions($id) {
+    @return map.get($dimensions, $id);
+}
 
 $durations: (
     anim-tick: 3s,
 );
+@function durations($id) {
+    @return map.get($durations, $id);
+}
 
 $colors: (
     bg: #fff,
@@ -14,3 +22,6 @@ $colors: (
     cat-toe-bean: #fd9ba1,
     impact: #b11026,
 );
+@function colors($id) {
+    @return map.get($colors, $id);
+}
