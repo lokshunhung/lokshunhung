@@ -2,7 +2,7 @@ import { CatProps } from './types';
 
 export const RPawUp = ({ id }: CatProps) => {
     return (
-        <g id={id} className="ld">
+        <g id={id} className="line-draw">
             <path
                 className="paw-bg"
                 d={`M2083 5736 c-113 -83 -129 -106 -162 -226 c-54 -193 -49 -521 10 -747
@@ -18,22 +18,22 @@ export const RPawUp = ({ id }: CatProps) => {
                 28 -95 32 -201 36 l-120 4 -102 -76z`}
             />
             <path
-                className="tb"
+                className="toe-bean"
                 d={`M2217 5589 c-20 -12 -47 -61 -47 -87 0 -23 40 -62 64 -62 10 0 31 13
                 47 29 38 38 39 82 3 110 -30 23 -41 25 -67 10z`}
             />
             <path
-                className="tb"
+                className="toe-bean"
                 d={`M2422 5498 c-25 -13 -37 -46 -28 -82 18 -73 186 -48 186 28 0 53 -93
                 85 -158 54z`}
             />
             <path
-                className="tb"
+                className="toe-bean"
                 d={`M2087 5352 c-32 -34 -35 -74 -7 -102 46 -46 120 -7 120 62 0 68 -65
                 91 -113 40z`}
             />
             <path
-                className="tb"
+                className="toe-bean"
                 d={`M2256 5321 c-28 -31 -33 -124 -11 -191 13 -40 24 -55 50 -67 32 -15
                 36 -15 82 8 68 34 91 81 75 158 -17 77 -45 103 -119 109 -50 3 -61 1 -77 -17z`}
             />

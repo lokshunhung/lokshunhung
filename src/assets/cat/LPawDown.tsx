@@ -2,7 +2,7 @@ import { CatProps } from './types';
 
 export const LPawDown = ({ id }: CatProps) => {
     return (
-        <g id={id} className="ld">
+        <g id={id} className="line-draw">
             <path
                 className="paw-bg"
                 d={`M5291 4163 c-58 -60 -112 -131 -146 -192 c-16 -29 -20 -59 -23 -156
