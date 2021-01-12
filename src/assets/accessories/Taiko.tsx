@@ -1,10 +1,13 @@
 export const Taiko = () => {
     return (
         <g className="accTaiko">
-            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="-147" y="283" width="485" height="670">
+            <mask id="topMask" mask-type="alpha" maskUnits="userSpaceOnUse" x="28" y="240" width="303" height="127">
+                <rect x="41.0685" y="240.176" width="300" height="50" transform="rotate(15 41.0685 240.176)" />
+            </mask>
+            <mask id="bodyMask" mask-type="alpha" maskUnits="userSpaceOnUse" x="-147" y="283" width="485" height="670">
                 <rect width="340" height="602" transform="matrix(0.965926 0.258819 0.258819 -0.965926 -147 864.784)" />
             </mask>
-            <g mask="url(#mask0)">
+            <g mask="url(#bodyMask)">
                 <ellipse
                     cx="130.958"
                     cy="484.258"
@@ -27,10 +30,7 @@ export const Taiko = () => {
                 strokeWidth="4"
             />
             <ellipse cx="176.64" cy="313.773" rx="100" ry="21" transform="rotate(15 176.64 313.773)" fill="#F84727" />
-            <mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="-147" y="283" width="485" height="670">
-                <rect width="340" height="602" transform="matrix(0.965926 0.258819 0.258819 -0.965926 -147 864.784)" />
-            </mask>
-            <g mask="url(#mask1)">
+            <g mask="url(#bodyMask)">
                 <path
                     d="M292.268 527.481C267.524 619.827 226.843 698.38 181.212 750.747C135.435 803.28 85.4176 828.709 41.7952 817.02C-1.82719 805.331 -32.4295 758.301 -45.8065 689.917C-59.1411 621.751 -55.0953 533.382 -30.3513 441.036C-5.6072 348.69 35.0736 270.137 80.7049 217.77C126.481 165.237 176.499 139.808 220.122 151.497C263.744 163.186 294.346 210.216 307.723 278.6C321.058 346.766 317.012 435.135 292.268 527.481Z"
                     stroke="black"
@@ -38,10 +38,7 @@ export const Taiko = () => {
                     fill="none"
                 />
             </g>
-            <mask id="mask2" mask-type="alpha" maskUnits="userSpaceOnUse" x="28" y="240" width="303" height="127">
-                <rect x="41.0685" y="240.176" width="300" height="50" transform="rotate(15 41.0685 240.176)" />
-            </mask>
-            <g mask="url(#mask2)">
+            <g mask="url(#topMask)">
                 <path
                     d="M315.008 365.342C313.561 370.742 308.778 375.468 300.298 379.11C291.858 382.735 280.235 385.057 266.138 385.903C237.977 387.594 200.637 383.354 160.852 372.694C121.067 362.034 86.6098 347.035 63.0669 331.491C51.2816 323.709 42.3772 315.887 36.88 308.527C31.3569 301.133 29.5785 294.649 31.0254 289.249C32.4723 283.849 37.2547 279.123 45.7347 275.481C54.1751 271.856 65.798 269.534 79.8949 268.688C108.056 266.997 145.396 271.237 185.181 281.897C224.966 292.557 259.423 307.556 282.966 323.1C294.751 330.882 303.656 338.704 309.153 346.064C314.676 353.458 316.454 359.942 315.008 365.342Z"
                     stroke="black"
