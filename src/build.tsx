@@ -1,12 +1,16 @@
 import { writeFileSync } from 'fs';
 import { join } from 'path';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { ReadmeImage } from '~/src/components/ReadmeImage';
 import * as SVGO from 'svgo';
+import { allAccessoryTypes } from '~/src/assets/accessories';
+import { ReadmeImage } from '~/src/components/ReadmeImage';
 
 const outputFilepath = join(__dirname, '../ReadmeImage.svg');
 
-const contents = renderToStaticMarkup(<ReadmeImage />);
+const accessoryIndex = Math.floor(Math.random() * allAccessoryTypes.length);
+const accessoryType = allAccessoryTypes[accessoryIndex]!;
+
+const contents = renderToStaticMarkup(<ReadmeImage accessoryType={accessoryType} />);
 
 const svgo = new SVGO();
 

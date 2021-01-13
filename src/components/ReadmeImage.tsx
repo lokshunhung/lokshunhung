@@ -3,9 +3,9 @@ import { CatHead, LPawDown, LPawUp, RPawDown, RPawUp } from '~/src/assets/cat';
 import { dimensions } from '~/src/defs/values';
 import { Svg } from './Svg';
 
-type ReadmeImageProps = { style?: React.CSSProperties; accessoryType?: AccessoryType };
+type ReadmeImageProps = { style?: React.CSSProperties; accessoryType: AccessoryType };
 
-export const ReadmeImage = ({ style, accessoryType = 'Peach' }: ReadmeImageProps) => {
+export const ReadmeImage = ({ style, accessoryType }: ReadmeImageProps) => {
     const { inlineStyles, BeforeComponent, AfterComponent } = getAccessory(accessoryType);
 
     const inlineStyleSheet = [
