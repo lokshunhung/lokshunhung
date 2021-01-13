@@ -15,18 +15,21 @@ $durations: (
     @return map.get($durations, $id);
 }
 
-$colors: (
-    bg: #fff,
-    outline: #000,
-    cat-bg: #fff,
-    cat-outline: #000,
-    cat-toe-bean: #fd9ba1,
-    impact: #b11026,
-    tk-batter: #f84727,
-    tk-body: #68c0c0,
-    tk-rim: #fff,
-    tk-outline: #000,
+$themes: (
+    light: (
+        bg: #fff,
+        outline: #000,
+        cat-bg: #fff,
+        cat-outline: #000,
+        cat-toe-bean: #fd9ba1,
+        impact: #b11026,
+        tk-batter: #f84727,
+        tk-body: #68c0c0,
+        tk-rim: #fff,
+        tk-outline: #000,
+    ),
 );
-@function colors($id) {
+@function colors($id, $theme: light) {
+    $colors: map.get($themes, $theme);
     @return map.get($colors, $id);
 }
