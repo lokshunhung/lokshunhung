@@ -1,7 +1,7 @@
 import { writeFileSync } from 'fs';
 import { join } from 'path';
+import * as prettier from 'prettier';
 import { renderToStaticMarkup } from 'react-dom/server';
-import * as SVGO from 'svgo';
 import { allAccessoryTypes } from '~/src/assets/accessories';
 import { ReadmeImage } from '~/src/components/ReadmeImage';
 
@@ -10,12 +10,12 @@ const outputFilepath = join(__dirname, '../ReadmeImage.svg');
 const accessoryIndex = Math.floor(Math.random() * allAccessoryTypes.length);
 const accessoryType = allAccessoryTypes[accessoryIndex]!;
 
-const contents = renderToStaticMarkup(<ReadmeImage accessoryType={accessoryType} />);
+const markup = renderToStaticMarkup(<ReadmeImage accessoryType={accessoryType} />);
 
-const svgo = new SVGO();
+const contents = prettier.format(markup, {
+    printWidth: 300,
+    tabWidth: 2,
+    filepath: '_.html',
+});
 
-svgo.optimize(contents, { path: outputFilepath })
-    .then((result) => result.data)
-    .then((data) => {
-        writeFileSync(outputFilepath, data, { encoding: 'utf8' });
-    });
+writeFileSync(outputFilepath, contents, { encoding: 'utf8' });
