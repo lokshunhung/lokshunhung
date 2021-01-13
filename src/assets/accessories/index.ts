@@ -1,10 +1,11 @@
 import { Bongo } from './Bongo';
 import { DualShock4 } from './DualShock4';
 import { EmergencyButton, EmergencyButtonText } from './EmergencyButton';
+import { HHKB } from './HHKB';
 import { Peach } from './Peach';
 import { Taiko } from './Taiko';
 
-export type AccessoryType = 'Bongo' | 'DualShock4' | 'EmergencyButton' | 'Peach' | 'Taiko';
+export type AccessoryType = 'Bongo' | 'DualShock4' | 'EmergencyButton' | 'HHKB' | 'Peach' | 'Taiko';
 
 export type AccessorySet = {
     inlineStyles: string;
@@ -33,6 +34,12 @@ export const getAccessory = (type: AccessoryType): AccessorySet => {
                 inlineStyles: require('bundle-text:./EmergencyButton.scss'),
                 BeforeComponent: EmergencyButtonText,
                 AfterComponent: EmergencyButton,
+            };
+        case 'HHKB':
+            return {
+                inlineStyles: require('bundle-text:./HHKB.scss'),
+                BeforeComponent: HHKB,
+                AfterComponent: NullComponent,
             };
         case 'Peach':
             return {
