@@ -1,7 +1,14 @@
+@use '~/src/defs/utils';
+
 .accDS4 {
+    @include utils.dynamic-color-property(filter, ds4-shadow);
     transform: translate(160px, 500px) rotate(7deg);
     image {
         width: 576px;
         height: 270px;
+    }
+    ellipse {
+        @include utils.dynamic-color-property(fill, ds4-glow);
+        transform: translate(180px, 250px) rotate(7deg);
     }
 }

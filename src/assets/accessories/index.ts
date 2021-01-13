@@ -7,7 +7,7 @@ import { Taiko } from './Taiko';
 
 export const allAccessoryTypes = ['Bongo', 'DualShock4', 'EmergencyButton', 'HHKB', 'Peach', 'Taiko'] as const;
 
-export const defaultAccessoryType = 'EmergencyButton';
+export const defaultAccessoryType = 'DualShock4';
 
 export type AccessoryType = typeof allAccessoryTypes[number];
 
