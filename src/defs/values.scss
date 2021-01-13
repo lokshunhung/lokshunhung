@@ -31,6 +31,21 @@ $themes: (
         tk-rim: #fff,
         tk-body: #68c0c0,
     ),
+    dark: (
+        bg: #333,
+        outline: #fff,
+        text: #eee,
+        // Cat
+        cat-bg: #333,
+        cat-outline: #fff,
+        cat-toe-bean: #fd9ba1,
+        impact: #b11026,
+        // Taiko
+        tk-outline: #000,
+        tk-batter: #68c0c0,
+        tk-rim: #fff,
+        tk-body: #f84727,
+    ),
 );
 @function colors($id, $theme: light) {
     $colors: map.get($themes, $theme);
