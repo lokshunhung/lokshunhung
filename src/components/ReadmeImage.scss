@@ -1,6 +1,10 @@
 @use '~/src/defs/utils';
 @use '~/src/defs/values';
 
+text {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 #background {
     @include utils.dynamic-color-property(fill, bg);
     width: 100%;
@@ -12,6 +16,14 @@
     stroke-width: 10px;
 }
 
+#description {
+    @include utils.dynamic-color-property(fill, text);
+    font-size: 2em;
+    font-weight: bolder;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
+
 #signature {
     @include utils.dynamic-color-property(fill, text);
     transform: translate(760px, 940px);
@@ -20,7 +32,6 @@
         stroke: none;
     }
     text {
-        font-family: 'Courier New', Courier, monospace;
         font-size: 1.5em;
         font-weight: bolder;
         dominant-baseline: middle;
