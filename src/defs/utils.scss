@@ -1,0 +1,12 @@
+@use './values';
+
+@mixin dynamic-color-property($property, $color-id) {
+    $light-color: values.colors($color-id, light);
+    $dark-color: values.colors($color-id, dark);
+
+    #{$property}: $light-color;
+
+    @media (prefers-color-scheme: dark) {
+        #{$property}: $dark-color;
+    }
+}

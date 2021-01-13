@@ -1,22 +1,23 @@
+@use '~/src/defs/utils';
 @use '~/src/defs/values';
 
 // Line Drawing
 .lineDraw {
+    @include utils.dynamic-color-property(fill, cat-outline);
     transform: translate(0, 1000px) scale(0.1, -0.1);
-    fill: values.colors(cat-outline);
 }
 
 // Toe Beans
 .toeBean {
-    fill: values.colors(cat-toe-bean);
+    @include utils.dynamic-color-property(fill, cat-toe-bean);
 }
 
 // Paw Background
 .pawBg {
-    fill: values.colors(cat-bg);
+    @include utils.dynamic-color-property(fill, cat-bg);
 }
 
 // Paw Impact Lines
 .impact {
-    fill: values.colors(impact);
+    @include utils.dynamic-color-property(fill, impact);
 }

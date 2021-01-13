@@ -18,6 +18,11 @@ const inlineStyleSheet = `
     aside li {
         list-style: none;
     }
+    @media (prefers-color-scheme: dark) {
+        aside {
+            color: #fff;
+        }
+    }
 `;
 
 type ControlProps = { accessoryType: AccessoryType; setAccessoryType: (type: AccessoryType) => void };
