@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { AccessoryType, allAccessoryTypes, defaultAccessoryType } from '~/src/assets/accessories';
 import { ReadmeImage } from '~/src/components/ReadmeImage';
 import { dimensions } from '~/src/defs/values';
-import { AccessoryType } from './assets/accessories';
 
 const inlineStyleSheet = `
     body {
@@ -23,10 +23,9 @@ const inlineStyleSheet = `
 type ControlProps = { accessoryType: AccessoryType; setAccessoryType: (type: AccessoryType) => void };
 
 const Control = ({ accessoryType, setAccessoryType }: ControlProps) => {
-    const options: AccessoryType[] = ['Bongo', 'DualShock4', 'EmergencyButton', 'HHKB', 'Peach', 'Taiko'];
     return (
         <ul>
-            {options.map((type) => (
+            {allAccessoryTypes.map((type) => (
                 <li key={type}>
                     <label>
                         <input type="radio" checked={type === accessoryType} onChange={() => setAccessoryType(type)} />
@@ -39,7 +38,7 @@ const Control = ({ accessoryType, setAccessoryType }: ControlProps) => {
 };
 
 const DevPreviewApp = () => {
-    const [accessoryType, setAccessoryType] = React.useState<AccessoryType>('EmergencyButton');
+    const [accessoryType, setAccessoryType] = React.useState<AccessoryType>(defaultAccessoryType);
     return (
         <>
             <main>

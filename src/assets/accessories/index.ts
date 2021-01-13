@@ -5,7 +5,11 @@ import { HHKB } from './HHKB';
 import { Peach } from './Peach';
 import { Taiko } from './Taiko';
 
-export type AccessoryType = 'Bongo' | 'DualShock4' | 'EmergencyButton' | 'HHKB' | 'Peach' | 'Taiko';
+export const allAccessoryTypes = ['Bongo', 'DualShock4', 'EmergencyButton', 'HHKB', 'Peach', 'Taiko'] as const;
+
+export const defaultAccessoryType = 'EmergencyButton';
+
+export type AccessoryType = typeof allAccessoryTypes[number];
 
 export type AccessorySet = {
     inlineStyles: string;
