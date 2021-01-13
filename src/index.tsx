@@ -39,7 +39,7 @@ const Control = ({ accessoryType, setAccessoryType }: ControlProps) => {
 };
 
 const DevPreviewApp = () => {
-    const [accessoryType, setAccessoryType] = React.useState<AccessoryType>('HHKB');
+    const [accessoryType, setAccessoryType] = React.useState<AccessoryType>('EmergencyButton');
     return (
         <>
             <main>
