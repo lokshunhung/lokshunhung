@@ -19,14 +19,17 @@ $themes: (
     light: (
         bg: #fff,
         outline: #000,
+        text: #666,
+        // Cat
         cat-bg: #fff,
         cat-outline: #000,
         cat-toe-bean: #fd9ba1,
         impact: #b11026,
-        tk-batter: #f84727,
-        tk-body: #68c0c0,
-        tk-rim: #fff,
+        // Taiko
         tk-outline: #000,
+        tk-batter: #f84727,
+        tk-rim: #fff,
+        tk-body: #68c0c0,
     ),
 );
 @function colors($id, $theme: light) {
