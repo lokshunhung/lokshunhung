@@ -23,7 +23,7 @@ const inlineStyleSheet = `
 type ControlProps = { accessoryType: AccessoryType; setAccessoryType: (type: AccessoryType) => void };
 
 const Control = ({ accessoryType, setAccessoryType }: ControlProps) => {
-    const options: AccessoryType[] = ['Bongo', 'EmergencyButton', 'Peach', 'Taiko'];
+    const options: AccessoryType[] = ['Bongo', 'DualShock4', 'EmergencyButton', 'Peach', 'Taiko'];
     return (
         <ul>
             {options.map((type) => (
@@ -39,7 +39,7 @@ const Control = ({ accessoryType, setAccessoryType }: ControlProps) => {
 };
 
 const DevPreviewApp = () => {
-    const [accessoryType, setAccessoryType] = React.useState<AccessoryType>('Peach');
+    const [accessoryType, setAccessoryType] = React.useState<AccessoryType>('DualShock4');
     return (
         <>
             <main>
