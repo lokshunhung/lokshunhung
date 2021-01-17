@@ -1,9 +1,7 @@
 @use '~/src/defs/utils';
-@use '~/src/defs/values';
 
 .lineDraw {
     @include utils.dynamic-color-property(fill, cat-outline);
-    transform: translate(0, 1000px) scale(0.1, -0.1);
 }
 
 .toeBean {
