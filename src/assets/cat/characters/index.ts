@@ -1,7 +1,7 @@
 export type Character = 'BongoCat';
 
 export type CharacterSet = {
-    inlineStyles: string;
+    characterStyles: string;
     CharacterComponent: React.ComponentType;
 };
 
@@ -13,7 +13,7 @@ export const getCharacter = (character: Character): CharacterSet => {
     switch (character) {
         case 'BongoCat':
             return {
-                inlineStyles: createStyles(require('bundle-text:./BongoCat.scss')),
+                characterStyles: createStyles(require('bundle-text:./BongoCat.scss')),
                 CharacterComponent: NullComponent,
             };
     }

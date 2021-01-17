@@ -6,12 +6,12 @@ import { Svg } from './Svg';
 type ReadmeImageProps = { style?: React.CSSProperties; accessoryType: AccessoryType };
 
 export const ReadmeImage = ({ style, accessoryType }: ReadmeImageProps) => {
-    const { inlineStyles, description, BeforeComponent, AfterComponent } = getAccessory(accessoryType);
-    const { inlineStyles: inlineStyles2, CharacterComponent } = getCharacter('BongoCat');
+    const { accessoryStyles, description, BeforeComponent, AfterComponent } = getAccessory(accessoryType);
+    const { characterStyles, CharacterComponent } = getCharacter('BongoCat');
 
     const inlineStyleSheet = [
-        inlineStyles,
-        inlineStyles2,
+        accessoryStyles,
+        characterStyles,
         require('bundle-text:./ReadmeImage.scss'),
         require('bundle-text:./ReadmeImage.paws.scss'),
     ].join('\n\n');
