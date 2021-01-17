@@ -1,5 +1,5 @@
 import { AccessoryType, getAccessory } from '~/src/assets/accessories';
-import { CatHead, LPawDown, LPawUp, RPawDown, RPawUp } from '~/src/assets/cat';
+import { CatFace, CatHead, LPawDown, LPawUp, RPawDown, RPawUp } from '~/src/assets/cat';
 import { dimensions } from '~/src/defs/values';
 import { Svg } from './Svg';
 
@@ -25,6 +25,8 @@ export const ReadmeImage = ({ style, accessoryType }: ReadmeImageProps) => {
             <BeforeComponent />
 
             <CatHead id="head" />
+            <CatFace id="face" />
+
             <LPawUp id="lPawUp" />
             <LPawDown id="lPawDown" />
             <RPawUp id="rPawUp" />
