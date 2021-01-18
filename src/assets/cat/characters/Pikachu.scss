@@ -1,6 +1,11 @@
 @use '~/src/defs/values';
 @use '~/src/defs/utils';
 
+.tailOutline {
+    @include utils.dynamic-color-property(stroke, cat-outline);
+    fill: none;
+}
+
 .lineDraw {
     @include utils.dynamic-color-property(fill, cat-outline);
 }

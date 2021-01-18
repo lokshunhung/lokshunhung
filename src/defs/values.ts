@@ -13,5 +13,6 @@ export const colors = {
         outline: '#212a2c',
         dimple: '#fa5e31',
         backStripe: '#d6793e',
+        tailShade: '#9d5236',
     },
 };
