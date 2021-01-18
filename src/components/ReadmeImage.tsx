@@ -1,13 +1,17 @@
 import { AccessoryType, getAccessory } from '~/src/assets/accessories';
-import { CatFace, CatHead, getCharacter, LPawDown, LPawUp, RPawDown, RPawUp } from '~/src/assets/cat';
+import { CatFace, CatHead, CharacterType, getCharacter, LPawDown, LPawUp, RPawDown, RPawUp } from '~/src/assets/cat';
 import { dimensions } from '~/src/defs/values';
 import { Svg } from './Svg';
 
-type ReadmeImageProps = { style?: React.CSSProperties; accessoryType: AccessoryType };
+type ReadmeImageProps = {
+    style?: React.CSSProperties;
+    accessoryType: AccessoryType;
+    characterType: CharacterType;
+};
 
-export const ReadmeImage = ({ style, accessoryType }: ReadmeImageProps) => {
+export const ReadmeImage = ({ style, accessoryType, characterType }: ReadmeImageProps) => {
     const { accessoryStyles, description, BeforeComponent, AfterComponent } = getAccessory(accessoryType);
-    const { characterStyles, CharacterComponent } = getCharacter('Pikachu');
+    const { characterStyles, CharacterComponent } = getCharacter(characterType);
 
     const inlineStyleSheet = [accessoryStyles, characterStyles, require('bundle-text:./ReadmeImage.scss')].join('\n\n');
 

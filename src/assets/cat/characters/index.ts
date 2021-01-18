@@ -1,6 +1,10 @@
 import { Pikachu } from './Pikachu';
 
-export type Character = 'BongoCat' | 'Pikachu';
+export const allCharacterTypes = ['BongoCat', 'Pikachu'] as const;
+
+export const defaultCharacterType = 'Pikachu';
+
+export type CharacterType = typeof allCharacterTypes[number];
 
 export type CharacterSet = {
     characterStyles: string;
@@ -11,7 +15,7 @@ const createStyles = (styles: string) => [require('bundle-text:./common.scss'), 
 
 const NullComponent = () => null;
 
-export const getCharacter = (character: Character): CharacterSet => {
+export const getCharacter = (character: CharacterType): CharacterSet => {
     switch (character) {
         case 'BongoCat':
             return {

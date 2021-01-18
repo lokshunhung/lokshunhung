@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom';
 import { AccessoryType, allAccessoryTypes, defaultAccessoryType } from '~/src/assets/accessories';
 import { ReadmeImage } from '~/src/components/ReadmeImage';
 import { dimensions } from '~/src/defs/values';
+import { allCharacterTypes, CharacterType, defaultCharacterType } from './assets/cat/characters';
 
 const inlineStyleSheet = `
     body {
@@ -25,32 +26,48 @@ const inlineStyleSheet = `
     }
 `;
 
-type ControlProps = { accessoryType: AccessoryType; setAccessoryType: (type: AccessoryType) => void };
+type ControlProps = {
+    accessoryType: AccessoryType;
+    setAccessoryType: (type: AccessoryType) => void;
+    characterType: CharacterType;
+    setCharacterType: (type: CharacterType) => void;
+};
 
-const Control = ({ accessoryType, setAccessoryType }: ControlProps) => {
+const Control = ({ accessoryType, setAccessoryType, characterType, setCharacterType }: ControlProps) => {
+    const renderAccessory = (type: AccessoryType) => (
+        <li key={type}>
+            <label>
+                <input type="radio" checked={type === accessoryType} onChange={() => setAccessoryType(type)} />
+                {type}
+            </label>
+        </li>
+    );
+    const renderCharacter = (type: CharacterType) => (
+        <li key={type}>
+            <label>
+                <input type="radio" checked={type === characterType} onChange={() => setCharacterType(type)} />
+                {type}
+            </label>
+        </li>
+    );
     return (
-        <ul>
-            {allAccessoryTypes.map((type) => (
-                <li key={type}>
-                    <label>
-                        <input type="radio" checked={type === accessoryType} onChange={() => setAccessoryType(type)} />
-                        {type}
-                    </label>
-                </li>
-            ))}
-        </ul>
+        <>
+            <ul>{allAccessoryTypes.map(renderAccessory)}</ul>
+            <ul>{allCharacterTypes.map(renderCharacter)}</ul>
+        </>
     );
 };
 
 const DevPreviewApp = () => {
     const [accessoryType, setAccessoryType] = React.useState<AccessoryType>(defaultAccessoryType);
+    const [characterType, setCharacterType] = React.useState<CharacterType>(defaultCharacterType);
     return (
         <>
             <main>
-                <ReadmeImage style={dimensions} accessoryType={accessoryType} />
+                <ReadmeImage style={dimensions} accessoryType={accessoryType} characterType={characterType} />
             </main>
             <aside>
-                <Control {...{ accessoryType, setAccessoryType }} />
+                <Control {...{ accessoryType, setAccessoryType, characterType, setCharacterType }} />
             </aside>
             <style>{inlineStyleSheet}</style>
         </>
