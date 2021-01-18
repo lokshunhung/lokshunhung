@@ -1,4 +1,4 @@
-import { SvgStyle } from '~/src/components/Svg';
+import { SvgStyle } from '~/src/components/svg';
 import { colors } from '~/src/defs/values';
 
 export const Charmander = () => {

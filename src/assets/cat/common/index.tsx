@@ -1,4 +1,4 @@
-import { SvgStyle } from '~/src/components/Svg';
+import { SvgStyle } from '~/src/components/svg';
 import { CatFace } from './CatFace';
 import { CatHead } from './CatHead';
 import { LPawDown } from './LPawDown';
