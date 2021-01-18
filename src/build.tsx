@@ -3,14 +3,19 @@ import { join } from 'path';
 import * as prettier from 'prettier';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { allAccessoryTypes } from '~/src/assets/accessories';
+import { allCharacterTypes } from '~/src/assets/cat';
 import { ReadmeImage } from '~/src/components/ReadmeImage';
 
-const outputFilepath = join(__dirname, '../ReadmeImage.svg');
+const imageOutputFilepath = join(__dirname, '../ReadmeImage.svg');
+const readmeOutputFilepath = join(__dirname, '../README.md');
 
 const accessoryIndex = Math.floor(Math.random() * allAccessoryTypes.length);
 const accessoryType = allAccessoryTypes[accessoryIndex]!;
 
-const markup = renderToStaticMarkup(<ReadmeImage accessoryType={accessoryType} />);
+const characterIndex = Math.floor(Math.random() * allCharacterTypes.length);
+const characterType = allCharacterTypes[characterIndex]!;
+
+const markup = renderToStaticMarkup(<ReadmeImage accessoryType={accessoryType} characterType={characterType} />);
 
 const contents = prettier.format(markup, {
     printWidth: 300,
@@ -18,4 +23,13 @@ const contents = prettier.format(markup, {
     filepath: '_.html',
 });
 
-writeFileSync(outputFilepath, contents, { encoding: 'utf8' });
+writeFileSync(imageOutputFilepath, contents, { encoding: 'utf8' });
+writeFileSync(
+    readmeOutputFilepath,
+    `<!-- built at ${Date.now()} -->
+<p align="center">
+  <img width="500" height="500" src="./ReadmeImage.svg">
+</p>
+`,
+    { encoding: 'utf8' },
+);
