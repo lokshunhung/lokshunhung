@@ -1,7 +1,7 @@
 import { AccessoryType, getAccessory } from '~/src/assets/accessories';
-import { Cat, CharacterType, getCharacter } from '~/src/assets/cat';
+import { CatFace, CatHead, CharacterType, getCharacter, LPawDown, LPawUp, RPawDown, RPawUp } from '~/src/assets/cat';
 import { dimensions } from '~/src/defs/values';
-import { Svg, SvgStyle } from './Svg';
+import { Svg } from './Svg';
 
 type ReadmeImageProps = {
     style?: React.CSSProperties;
@@ -10,12 +10,14 @@ type ReadmeImageProps = {
 };
 
 export const ReadmeImage = ({ style, accessoryType, characterType }: ReadmeImageProps) => {
-    const { description, BeforeComponent, AfterComponent } = getAccessory(accessoryType);
-    const { characterName, CharacterComponent } = getCharacter(characterType);
+    const { accessoryStyles, description, BeforeComponent, AfterComponent } = getAccessory(accessoryType);
+    const { characterName, characterStyles, CharacterComponent } = getCharacter(characterType);
+
+    const inlineStyleSheet = [accessoryStyles, characterStyles, require('bundle-text:./ReadmeImage.scss')].join('\n\n');
 
     return (
         <Svg viewBoxWidth={dimensions.width} viewBoxHeight={dimensions.height} style={style}>
-            <SvgStyle name="ReadmeImage">{require('bundle-text:./ReadmeImage.scss')}</SvgStyle>
+            <style>{inlineStyleSheet}</style>
 
             <rect id="background" />
 
@@ -25,7 +27,13 @@ export const ReadmeImage = ({ style, accessoryType, characterType }: ReadmeImage
 
             <BeforeComponent />
 
-            <Cat />
+            <CatHead />
+            <CatFace />
+
+            <LPawUp />
+            <LPawDown />
+            <RPawUp />
+            <RPawDown />
 
             <AfterComponent />
 

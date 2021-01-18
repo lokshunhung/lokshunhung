@@ -12,6 +12,7 @@ export const defaultAccessoryType = 'DualShock4';
 export type AccessoryType = typeof allAccessoryTypes[number];
 
 export type AccessorySet = {
+    accessoryStyles: string;
     description: string;
     BeforeComponent: React.ComponentType;
     AfterComponent: React.ComponentType;
@@ -23,36 +24,42 @@ export const getAccessory = (type: AccessoryType): AccessorySet => {
     switch (type) {
         case 'Bongo':
             return {
+                accessoryStyles: require('bundle-text:./Bongo.scss'),
                 description: 'playing bongos',
                 BeforeComponent: Bongo,
                 AfterComponent: NullComponent,
             };
         case 'DualShock4':
             return {
+                accessoryStyles: require('bundle-text:./DualShock4.scss'),
                 description: 'gaming',
                 BeforeComponent: DualShock4,
                 AfterComponent: NullComponent,
             };
         case 'EmergencyButton':
             return {
+                accessoryStyles: require('bundle-text:./EmergencyButton.scss'),
                 description: 'playing Among Us',
                 BeforeComponent: EmergencyButtonText,
                 AfterComponent: EmergencyButton,
             };
         case 'HHKB':
             return {
+                accessoryStyles: require('bundle-text:./HHKB.scss'),
                 description: 'working',
                 BeforeComponent: HHKB,
                 AfterComponent: NullComponent,
             };
         case 'Peach':
             return {
+                accessoryStyles: require('bundle-text:./Peach.scss'),
                 description: 'bored',
                 BeforeComponent: Peach,
                 AfterComponent: NullComponent,
             };
         case 'Taiko':
             return {
+                accessoryStyles: require('bundle-text:./Taiko.scss'),
                 description: 'playing Taiko no Tatsujin',
                 BeforeComponent: Taiko,
                 AfterComponent: NullComponent,

@@ -1,4 +1,3 @@
-import { SvgStyle } from '~/src/components/Svg';
 import { colors } from '~/src/defs/values';
 
 const Tail = () => {
@@ -23,9 +22,7 @@ const Tail = () => {
 
 export const Pikachu = () => {
     return (
-        <>
-            <SvgStyle name="Pikachu">{require('bundle-text:./Pikachu.scss')}</SvgStyle>
-
+        <g>
             <Tail />
 
             <mask
@@ -63,6 +60,6 @@ export const Pikachu = () => {
                     fill={colors.pika.backStripe}
                 />
             </g>
-        </>
+        </g>
     );
 };
