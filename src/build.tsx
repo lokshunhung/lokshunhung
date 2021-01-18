@@ -6,6 +6,8 @@ import { allAccessoryTypes } from '~/src/assets/accessories';
 import { allCharacterTypes } from '~/src/assets/cat';
 import { ReadmeImage } from '~/src/components/ReadmeImage';
 
+console.time('Generated');
+
 const imageOutputFilepath = join(__dirname, '../ReadmeImage.svg');
 const readmeOutputFilepath = join(__dirname, '../README.md');
 
@@ -33,3 +35,6 @@ writeFileSync(
 `,
     { encoding: 'utf8' },
 );
+
+console.info(`Generated character:${characterType} type:${accessoryType}`);
+console.timeEnd('Generated');
