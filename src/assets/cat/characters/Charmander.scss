@@ -1,0 +1,40 @@
+@use '~/src/defs/utils';
+@use '~/src/defs/values';
+
+.tailOutline,
+.flameOutline {
+    @include utils.dynamic-color-property(stroke, cat-outline);
+}
+
+.lineDraw {
+    @include utils.dynamic-color-property(fill, cat-outline);
+}
+
+.toeBean {
+    fill: none;
+}
+
+.pawBg {
+    fill: #ff8801;
+}
+
+.impact {
+    @include utils.dynamic-color-property(fill, impact);
+}
+
+#face {
+    fill: values.colors(pika-outline);
+}
+
+#fire {
+    animation: fire 1s step-end infinite;
+    @keyframes fire {
+        0%,
+        100% {
+            transform: translate(77%, 51%);
+        }
+        50% {
+            transform: translate(77%, 51%) scaleX(-1);
+        }
+    }
+}

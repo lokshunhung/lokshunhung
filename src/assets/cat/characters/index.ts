@@ -1,8 +1,9 @@
+import { Charmander } from './Charmander';
 import { Pikachu } from './Pikachu';
 
-export const allCharacterTypes = ['BongoCat', 'Pikachu'] as const;
+export const allCharacterTypes = ['BongoCat', 'Charmander', 'Pikachu'] as const;
 
-export const defaultCharacterType = 'Pikachu';
+export const defaultCharacterType = 'Charmander';
 
 export type CharacterType = typeof allCharacterTypes[number];
 
@@ -23,6 +24,12 @@ export const getCharacter = (character: CharacterType): CharacterSet => {
                 characterName: 'Bongo Cat',
                 characterStyles: createStyles(require('bundle-text:./BongoCat.scss')),
                 CharacterComponent: NullComponent,
+            };
+        case 'Charmander':
+            return {
+                characterName: 'Charmander',
+                characterStyles: createStyles(require('bundle-text:./Charmander.scss')),
+                CharacterComponent: Charmander,
             };
         case 'Pikachu':
             return {
