@@ -1,8 +1,13 @@
+import { SvgStyle } from '~/src/components/Svg';
+
 export const EmergencyButton = () => {
     return (
-        <g className="accEmBtn">
-            <image href={require('data-url:./EmergencyButton.png')} />
-        </g>
+        <>
+            <SvgStyle name="EmergencyButton">{require('bundle-text:./EmergencyButton.scss')}</SvgStyle>
+            <g className="accEmBtn">
+                <image href={require('data-url:./EmergencyButton.png')} />
+            </g>
+        </>
     );
 };
 
