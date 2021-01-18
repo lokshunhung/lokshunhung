@@ -7,6 +7,7 @@ export const defaultCharacterType = 'Pikachu';
 export type CharacterType = typeof allCharacterTypes[number];
 
 export type CharacterSet = {
+    characterName: string;
     characterStyles: string;
     CharacterComponent: React.ComponentType;
 };
@@ -19,11 +20,13 @@ export const getCharacter = (character: CharacterType): CharacterSet => {
     switch (character) {
         case 'BongoCat':
             return {
+                characterName: 'Bongo Cat',
                 characterStyles: createStyles(require('bundle-text:./BongoCat.scss')),
                 CharacterComponent: NullComponent,
             };
         case 'Pikachu':
             return {
+                characterName: 'Pikachu',
                 characterStyles: createStyles(require('bundle-text:./Pikachu.scss')),
                 CharacterComponent: Pikachu,
             };

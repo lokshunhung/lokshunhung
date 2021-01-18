@@ -11,7 +11,7 @@ type ReadmeImageProps = {
 
 export const ReadmeImage = ({ style, accessoryType, characterType }: ReadmeImageProps) => {
     const { accessoryStyles, description, BeforeComponent, AfterComponent } = getAccessory(accessoryType);
-    const { characterStyles, CharacterComponent } = getCharacter(characterType);
+    const { characterName, characterStyles, CharacterComponent } = getCharacter(characterType);
 
     const inlineStyleSheet = [accessoryStyles, characterStyles, require('bundle-text:./ReadmeImage.scss')].join('\n\n');
 
@@ -38,7 +38,7 @@ export const ReadmeImage = ({ style, accessoryType, characterType }: ReadmeImage
             <AfterComponent />
 
             <text id="description" x={500} y={100}>
-                {description}
+                {characterName} is {description}.
             </text>
 
             <g id="signature">

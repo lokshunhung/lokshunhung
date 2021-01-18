@@ -25,42 +25,42 @@ export const getAccessory = (type: AccessoryType): AccessorySet => {
         case 'Bongo':
             return {
                 accessoryStyles: require('bundle-text:./Bongo.scss'),
-                description: 'Bongo Cat is playing bongos.',
+                description: 'playing bongos',
                 BeforeComponent: Bongo,
                 AfterComponent: NullComponent,
             };
         case 'DualShock4':
             return {
                 accessoryStyles: require('bundle-text:./DualShock4.scss'),
-                description: 'Bongo Cat is gaming.',
+                description: 'gaming',
                 BeforeComponent: DualShock4,
                 AfterComponent: NullComponent,
             };
         case 'EmergencyButton':
             return {
                 accessoryStyles: require('bundle-text:./EmergencyButton.scss'),
-                description: 'Bongo Cat is playing Among Us.',
+                description: 'playing Among Us',
                 BeforeComponent: EmergencyButtonText,
                 AfterComponent: EmergencyButton,
             };
         case 'HHKB':
             return {
                 accessoryStyles: require('bundle-text:./HHKB.scss'),
-                description: 'Bongo Cat is working.',
+                description: 'working',
                 BeforeComponent: HHKB,
                 AfterComponent: NullComponent,
             };
         case 'Peach':
             return {
                 accessoryStyles: require('bundle-text:./Peach.scss'),
-                description: 'Bongo Cat is bored.',
+                description: 'bored',
                 BeforeComponent: Peach,
                 AfterComponent: NullComponent,
             };
         case 'Taiko':
             return {
                 accessoryStyles: require('bundle-text:./Taiko.scss'),
-                description: 'Bongo Cat is playing Taiko no Tatsujin.',
+                description: 'playing Taiko no Tatsujin',
                 BeforeComponent: Taiko,
                 AfterComponent: NullComponent,
             };
