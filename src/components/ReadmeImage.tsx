@@ -9,12 +9,7 @@ export const ReadmeImage = ({ style, accessoryType }: ReadmeImageProps) => {
     const { accessoryStyles, description, BeforeComponent, AfterComponent } = getAccessory(accessoryType);
     const { characterStyles, CharacterComponent } = getCharacter('Pikachu');
 
-    const inlineStyleSheet = [
-        accessoryStyles,
-        characterStyles,
-        require('bundle-text:./ReadmeImage.scss'),
-        require('bundle-text:./ReadmeImage.paws.scss'),
-    ].join('\n\n');
+    const inlineStyleSheet = [accessoryStyles, characterStyles, require('bundle-text:./ReadmeImage.scss')].join('\n\n');
 
     return (
         <Svg viewBoxWidth={dimensions.width} viewBoxHeight={dimensions.height} style={style}>
@@ -28,13 +23,13 @@ export const ReadmeImage = ({ style, accessoryType }: ReadmeImageProps) => {
 
             <BeforeComponent />
 
-            <CatHead id="head" />
-            <CatFace id="face" />
+            <CatHead />
+            <CatFace />
 
-            <LPawUp id="lPawUp" />
-            <LPawDown id="lPawDown" />
-            <RPawUp id="rPawUp" />
-            <RPawDown id="rPawDown" />
+            <LPawUp />
+            <LPawDown />
+            <RPawUp />
+            <RPawDown />
 
             <AfterComponent />
 

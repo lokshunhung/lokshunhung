@@ -1,8 +1,6 @@
-import { CatProps } from './types';
-
-export const LPawDown = ({ id }: CatProps) => {
+export const LPawDown = () => {
     return (
-        <g id={id} className="lineDraw">
+        <g id="lPawDown" className="lineDraw">
             <path
                 className="pawBg"
                 d={`M5291 4163 c-58 -60 -112 -131 -146 -192 c-16 -29 -20 -59 -23 -156

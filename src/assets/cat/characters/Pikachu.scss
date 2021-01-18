@@ -15,3 +15,7 @@
 .impact {
     @include utils.dynamic-color-property(fill, impact);
 }
+
+#face {
+    fill: #212a2c;
+}

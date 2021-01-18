@@ -1,8 +1,6 @@
-import { CatProps } from './types';
-
-export const CatFace = ({ id }: CatProps) => {
+export const CatFace = () => {
     return (
-        <g id={id} className="lineDraw">
+        <g id="face" className="lineDraw">
             <path
                 d={`M3515 5279 c-60 -53 -71 -164 -19 -216 19 -19 33 -23 88 -23 58 0 70
                 3 96 28 39 34 55 97 40 152 -24 90 -133 122 -205 59z`}

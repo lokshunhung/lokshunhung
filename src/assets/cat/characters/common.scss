@@ -1,3 +1,46 @@
+@use 'sass:list';
+@use '~/src/defs/values';
+
+@function beat($i) {
+    @return 100% * $i / 8;
+}
+
+// prettier-ignore
+@mixin beatKeyframe($ident, $show-rhythm, $hide-rhythm) {
+    animation: $ident values.durations(anim-tick) step-end infinite;
+    @keyframes #{$ident} {
+        $show: ();
+        @each $note in $show-rhythm {
+            $show: list.append($show, beat($note), $separator: comma);
+        }
+        #{$show} { opacity: 1; }
+
+        $hide: ();
+        @each $note in $hide-rhythm {
+            $hide: list.append($hide, beat($note), $separator: comma);
+        }
+        #{$hide} { opacity: 0; }
+    }
+}
+
+@mixin pattern($ident, $up-rhythm, $down-rhythm) {
+    ##{$ident}Up {
+        @include beatKeyframe(#{$ident}Up, $up-rhythm, $down-rhythm);
+    }
+    ##{$ident}Down {
+        @include beatKeyframe(#{$ident}Down, $down-rhythm, $up-rhythm);
+    }
+}
+
+// beat:       | 0 - 1 - 2 - 3 - 4 - 5 - 6 - 7 - |
+// right-paw     U       D U D U         D U
+// left-paw:     D U D U         D U D U
+
+@include pattern(rPaw, (0, 2.5, 3.5, 6.5), (2, 3, 6));
+@include pattern(lPaw, (0.5, 1.5, 4.5, 5.5), (0, 1, 4, 5));
+
+// Common Transforms
+
 .lineDraw {
     transform: translate(0, 1000px) scale(0.1, -0.1);
 }
