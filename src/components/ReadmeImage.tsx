@@ -1,7 +1,7 @@
 import { AccessoryType, getAccessory } from '~/src/assets/accessories';
 import { Cat, CharacterType, getCharacter } from '~/src/assets/cat';
 import { dimensions } from '~/src/defs/values';
-import { Svg, SvgStyle } from './svg';
+import { Svg, SvgStyle } from './Svg';
 
 type ReadmeImageProps = {
     style?: React.CSSProperties;

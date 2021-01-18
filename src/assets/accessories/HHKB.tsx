@@ -1,4 +1,4 @@
-import { SvgStyle } from '~/src/components/svg';
+import { SvgStyle } from '~/src/components/Svg';
 
 export const HHKB = () => {
     return (
