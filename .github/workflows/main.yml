@@ -1,0 +1,41 @@
+name: Generate Readme Image
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 */1 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14]
+
+    steps:
+      - name: Checkout repository under @GITHUB_WORKSPACE
+        uses: actions/checkout@v2
+
+      - name: Setup node ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install node_modules
+        run: yarn install --frozen-lockfile
+
+      - name: Generate Readme Image
+        run: yarn build
+
+      - name: Commit
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git commit -am "generate ReadmeImage"
+          git push -f https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
+
+      - name: Kill image cache
+        run: |
+          curl -X PURGE https://camo.githubusercontent.com/${GITHUB_REPOSITORY}/master/ReadmeImage.svg
