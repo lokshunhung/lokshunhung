@@ -15,4 +15,12 @@ export const colors = {
         backStripe: '#d6793e',
         tailShade: '#9d5236',
     },
+    charm: {
+        bg: '#ff8801',
+        outline: '#212a2c',
+        belly: '#ffe490',
+        flameShade1: '#af4d30',
+        flameShade2: '#ff8e14',
+        flameShade3: '#ffc414',
+    },
 };

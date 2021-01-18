@@ -1,3 +1,5 @@
+import { colors } from '~/src/defs/values';
+
 export const Charmander = () => {
     return (
         <g>
@@ -8,11 +10,11 @@ export const Charmander = () => {
                 <path d="M0 475 1000 710 500 0Z" />
             </mask>
 
-            <rect fill="#FF8801" mask="url(#outlineMask)" width={1000} height={1000} />
-            <ellipse fill="#FFE490" mask="url(#tableMask)" cx={400} cy={720} rx={170} ry={180} />
+            <rect fill={colors.charm.bg} mask="url(#outlineMask)" width={1000} height={1000} />
+            <ellipse fill={colors.charm.belly} mask="url(#tableMask)" cx={400} cy={720} rx={170} ry={180} />
             <path
                 className="tailOutline"
-                fill="#FF8801"
+                fill={colors.charm.bg}
                 strokeWidth={8}
                 d="m767 527c-7 27-23 63-51 63l16 55c48 0 58-73 42-118c-1-4-6-4-7 0z"
             />
@@ -23,9 +25,19 @@ export const Charmander = () => {
             <g id="fire">
                 <path d="m0 0c-34-2-17-52 1-80c3-4 7-4 7 1c0 19 2 27 12 38c13 17 2 43-20 41z" id="flame" />
                 <use xlinkHref="#flame" className="flameOutline" strokeWidth={12} />
-                <use xlinkHref="#flame" fill="#AF4D30" filter="url(#flameBlur)" />
-                <use xlinkHref="#flame" fill="#FF8E14" filter="url(#flameBlur)" transform="scale(0.9)" />
-                <use xlinkHref="#flame" fill="#FFC414" filter="url(#flameBlur)" transform="scale(0.6)" />
+                <use xlinkHref="#flame" fill={colors.charm.flameShade1} filter="url(#flameBlur)" />
+                <use
+                    xlinkHref="#flame"
+                    fill={colors.charm.flameShade2}
+                    filter="url(#flameBlur)"
+                    transform="scale(0.9)"
+                />
+                <use
+                    xlinkHref="#flame"
+                    fill={colors.charm.flameShade3}
+                    filter="url(#flameBlur)"
+                    transform="scale(0.6)"
+                />
             </g>
         </g>
     );
