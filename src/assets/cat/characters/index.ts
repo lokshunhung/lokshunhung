@@ -1,4 +1,6 @@
-export type Character = 'BongoCat';
+import { Pikachu } from './Pikachu';
+
+export type Character = 'BongoCat' | 'Pikachu';
 
 export type CharacterSet = {
     characterStyles: string;
@@ -15,6 +17,11 @@ export const getCharacter = (character: Character): CharacterSet => {
             return {
                 characterStyles: createStyles(require('bundle-text:./BongoCat.scss')),
                 CharacterComponent: NullComponent,
+            };
+        case 'Pikachu':
+            return {
+                characterStyles: createStyles(require('bundle-text:./Pikachu.scss')),
+                CharacterComponent: Pikachu,
             };
     }
 };

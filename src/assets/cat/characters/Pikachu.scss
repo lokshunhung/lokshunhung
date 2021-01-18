@@ -1,0 +1,17 @@
+@use '~/src/defs/utils';
+
+.lineDraw {
+    @include utils.dynamic-color-property(fill, cat-outline);
+}
+
+.toeBean {
+    fill: none;
+}
+
+.pawBg {
+    fill: #ffdf4e;
+}
+
+.impact {
+    @include utils.dynamic-color-property(fill, impact);
+}

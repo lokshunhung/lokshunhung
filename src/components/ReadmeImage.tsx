@@ -7,7 +7,7 @@ type ReadmeImageProps = { style?: React.CSSProperties; accessoryType: AccessoryT
 
 export const ReadmeImage = ({ style, accessoryType }: ReadmeImageProps) => {
     const { accessoryStyles, description, BeforeComponent, AfterComponent } = getAccessory(accessoryType);
-    const { characterStyles, CharacterComponent } = getCharacter('BongoCat');
+    const { characterStyles, CharacterComponent } = getCharacter('Pikachu');
 
     const inlineStyleSheet = [
         accessoryStyles,
