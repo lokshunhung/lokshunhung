@@ -26,9 +26,21 @@ const contents = prettier.format(markup, {
 });
 
 writeFileSync(imageOutputFilepath, contents, { encoding: 'utf8' });
+
+const now = Intl.DateTimeFormat('en-HK', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    hour12: false,
+    minute: '2-digit',
+    second: '2-digit',
+    timeZoneName: 'short',
+}).format(new Date());
+
 writeFileSync(
     readmeOutputFilepath,
-    `<!-- built at ${Intl.DateTimeFormat('en-HK').format(new Date())} -->
+    `<!-- built at ${now} -->
 <p align="center">
   <img width="500" height="500" src="./ReadmeImage.svg">
 </p>
