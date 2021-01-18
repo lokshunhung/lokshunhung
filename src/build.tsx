@@ -36,5 +36,5 @@ writeFileSync(
     { encoding: 'utf8' },
 );
 
-console.info(`Generated character:${characterType} type:${accessoryType}`);
+console.info(`Generated characterType:${characterType} accessoryType:${accessoryType}`);
 console.timeEnd('Generated');
