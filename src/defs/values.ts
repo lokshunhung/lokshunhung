@@ -6,3 +6,12 @@ export const dimensions = {
 export const durations = {
     animTick: 3,
 };
+
+export const colors = {
+    pika: {
+        bg: '#ffdf4e',
+        outline: '#212a2c',
+        dimple: '#fa5e31',
+        backStripe: '#d6793e',
+    },
+};
