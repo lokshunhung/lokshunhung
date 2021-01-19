@@ -28,17 +28,16 @@
 
 #fire {
     transform: translate(77%, 51%);
-}
-
-#flame {
-    animation: flame 1s step-end infinite;
-    @keyframes flame {
-        0%,
-        100% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scaleX(-1);
+    g {
+        animation: fire 1s step-end infinite;
+        @keyframes fire {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scaleX(-1);
+            }
         }
     }
 }

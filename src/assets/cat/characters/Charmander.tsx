@@ -22,11 +22,13 @@ export const Charmander = () => (
             <feGaussianBlur in="SourceGraphic" stdDeviation={3} />
         </filter>
         <g id="fire">
-            <path d="m0 0c-34-2-17-52 1-80c3-4 7-4 7 1c0 19 2 27 12 38c13 17 2 43-20 41z" id="flame" />
-            <use href="#flame" className="flameOutline" strokeWidth={12} />
-            <use href="#flame" fill={colors.charm.flameShade1} filter="url(#flameBlur)" />
-            <use href="#flame" fill={colors.charm.flameShade2} filter="url(#flameBlur)" transform="scale(0.9)" />
-            <use href="#flame" fill={colors.charm.flameShade3} filter="url(#flameBlur)" transform="scale(0.6)" />
+            <g>
+                <path d="m0 0c-34-2-17-52 1-80c3-4 7-4 7 1c0 19 2 27 12 38c13 17 2 43-20 41z" id="flame" />
+                <use href="#flame" className="flameOutline" strokeWidth={12} />
+                <use href="#flame" fill={colors.charm.flameShade1} filter="url(#flameBlur)" />
+                <use href="#flame" fill={colors.charm.flameShade2} filter="url(#flameBlur)" transform="scale(0.9)" />
+                <use href="#flame" fill={colors.charm.flameShade3} filter="url(#flameBlur)" transform="scale(0.6)" />
+            </g>
         </g>
     </>
 );
