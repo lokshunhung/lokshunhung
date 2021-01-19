@@ -19,7 +19,7 @@ const Tail = () => (
 );
 
 export const Pikachu = () => (
-    <g>
+    <>
         <Tail />
 
         <mask id="outlineMask" mask-type="alpha" maskUnits="userSpaceOnUse" x="188" y="324" width="549" height="324">
@@ -49,5 +49,5 @@ export const Pikachu = () => (
                 fill={colors.pika.backStripe}
             />
         </g>
-    </g>
+    </>
 );
