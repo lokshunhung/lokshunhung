@@ -39,6 +39,9 @@ jobs:
       - name: Install node_modules
         run: yarn install --frozen-lockfile --prefer-offline
 
+      - name: Run eslint
+        run: yarn lint
+
       - name: Generate Readme Image
         run: yarn build
 
