@@ -28,7 +28,7 @@
         "@types/prettier": "2.1.6",
         "@types/react": "17.0.0",
         "@types/react-dom": "17.0.0",
-        "@vnus/prettier-config": "0.0.1",
+        "@vnus/prettier-config": "0.0.2",
         "eslint": "7.18.0",
         "eslint-config-vnus": "0.0.7",
         "parcel": "2.0.0-nightly.524",
