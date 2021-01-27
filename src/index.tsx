@@ -1,9 +1,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { AccessoryType, allAccessoryTypes, defaultAccessoryType } from '~/src/assets/accessories';
+import type { AccessoryType } from '~/src/assets/accessories';
+import { allAccessoryTypes, defaultAccessoryType } from '~/src/assets/accessories';
 import { ReadmeImage } from '~/src/components/ReadmeImage';
 import { dimensions } from '~/src/defs/values';
-import { allCharacterTypes, CharacterType, defaultCharacterType } from './assets/cat/characters';
+import type { CharacterType } from './assets/cat/characters';
+import { allCharacterTypes, defaultCharacterType } from './assets/cat/characters';
 
 const inlineStyleSheet = `
     body {

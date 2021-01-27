@@ -1,5 +1,7 @@
-import { AccessoryType, getAccessory } from '~/src/assets/accessories';
-import { CatFace, CatHead, CharacterType, getCharacter, LPawDown, LPawUp, RPawDown, RPawUp } from '~/src/assets/cat';
+import type { AccessoryType } from '~/src/assets/accessories';
+import { getAccessory } from '~/src/assets/accessories';
+import type { CharacterType } from '~/src/assets/cat';
+import { CatFace, CatHead, getCharacter, LPawDown, LPawUp, RPawDown, RPawUp } from '~/src/assets/cat';
 import { dimensions } from '~/src/defs/values';
 import { Svg } from './Svg';
 

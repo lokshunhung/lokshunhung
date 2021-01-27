@@ -42,6 +42,9 @@
         "extends": "vnus/presets/react",
         "parserOptions": {
             "project": "./tsconfig.json"
+        },
+        "rules": {
+            "@typescript-eslint/prefer-readonly-parameter-types": "off"
         }
     }
 }

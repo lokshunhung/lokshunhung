@@ -12,9 +12,11 @@ const imageOutputFilepath = join(__dirname, '../ReadmeImage.svg');
 const readmeOutputFilepath = join(__dirname, '../README.md');
 
 const accessoryIndex = Math.floor(Math.random() * allAccessoryTypes.length);
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- index checked
 const accessoryType = allAccessoryTypes[accessoryIndex]!;
 
 const characterIndex = Math.floor(Math.random() * allCharacterTypes.length);
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- index checked
 const characterType = allCharacterTypes[characterIndex]!;
 
 const markup = renderToStaticMarkup(<ReadmeImage accessoryType={accessoryType} characterType={characterType} />);
