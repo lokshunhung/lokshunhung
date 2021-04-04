@@ -76,17 +76,6 @@
       transform: translate(0, 1000px) scale(0.1, -0.1);
     }
 
-    .tailOutline,
-    .flameOutline {
-      stroke: #000;
-    }
-    @media (prefers-color-scheme: dark) {
-      .tailOutline,
-    .flameOutline {
-        stroke: #fff;
-      }
-    }
-
     .lineDraw {
       fill: #000;
     }
@@ -97,11 +86,21 @@
     }
 
     .toeBean {
-      fill: none;
+      fill: #fd9ba1;
+    }
+    @media (prefers-color-scheme: dark) {
+      .toeBean {
+        fill: #fd9ba1;
+      }
     }
 
     .pawBg {
-      fill: #ff8801;
+      fill: #fff;
+    }
+    @media (prefers-color-scheme: dark) {
+      .pawBg {
+        fill: #333;
+      }
     }
 
     .impact {
@@ -110,25 +109,6 @@
     @media (prefers-color-scheme: dark) {
       .impact {
         fill: #b11026;
-      }
-    }
-
-    #face {
-      fill: #212a2c;
-    }
-
-    #fire {
-      transform: translate(77%, 51%);
-    }
-    #fire g {
-      animation: fire 1s step-end infinite;
-    }
-    @keyframes fire {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scaleX(-1);
       }
     }
 
@@ -192,25 +172,6 @@
     }
   </style>
   <rect id="background"></rect>
-  <mask id="outlineMask" mask-type="alpha">
-    <path
-      d="m735.275 647.79l-546.345-128.391c3.47-5.37 8.865-11.839 16.47-19.799c3.6-3.8 6.6-7.6 6.6-8.4c0-1.9 26.9-29.7 40.1-41.4c3.5-3.1 7-5.7 7.7-5.8c.139 0 .32.055.535.155c-.628-1.011-.305-2.108 1.065-2.855c.8-.4 4.4-3.5 8.2-6.8c24.8-22.1 60-46.2 83-57.2c8.4-4 34.7-13.3 37.6-13.3c.7 0 2.5-1.7 3.9-3.8c3.6-5.1 31.7-34.5 33.8-35.4c4.7-1.9 9.9.9 16.6 9.1c15.7 19.3 20.7 26 22.6 29.8c2.6 5.4 3.1 5.7 11.9 7.8c10.1 2.4 21.2 6.3 41 14.5c9.1 3.8 25.3 9.8 36 13.5c22.2 7.5 34.8 13.4 57 26.4c8.5 5 20.1 10.9 25.8 13.2l10.3 4.1l11.7-5c6.4-2.8 18.8-7.9 27.5-11.3c13.4-5.3 16.1-6 18.2-5.1c3.9 1.8 4.9 7.5 4.9 28.7c.1 21.8-.6 25.9-7 42.2c-4 10.3-5.1 14.8-7.4 30.3c-.4 3-1.5 7.1-2.5 9.1l-1.7 3.6l5.6 7.4c10.4 13.5 27.3 51.1 34.6 77.1c3.5 12.2 3.8 14.5 3.3 21c-.185 2.185-.562 4.52-1.025 6.59zm-472.455-201.84c.167.085.328.178.482.278l-.084.075c-.133-.12-.266-.238-.398-.353z"
-    ></path>
-  </mask>
-  <mask id="tableMask" mask-type="alpha"><path d="M0 475 1000 710 500 0Z"></path></mask>
-  <rect fill="#ff8801" mask="url(#outlineMask)" width="1000" height="1000"></rect>
-  <ellipse fill="#ffe490" mask="url(#tableMask)" cx="400" cy="720" rx="170" ry="180"></ellipse>
-  <path class="tailOutline" fill="#ff8801" stroke-width="8" d="m767 527c-7 27-23 63-51 63l16 55c48 0 58-73 42-118c-1-4-6-4-7 0z"></path>
-  <filter id="flameBlur"><feGaussianBlur in="SourceGraphic" stdDeviation="3"></feGaussianBlur></filter>
-  <g id="fire">
-    <g>
-      <path d="m0 0c-34-2-17-52 1-80c3-4 7-4 7 1c0 19 2 27 12 38c13 17 2 43-20 41z" id="flame"></path>
-      <use href="#flame" class="flameOutline" stroke-width="12"></use>
-      <use href="#flame" fill="#af4d30" filter="url(#flameBlur)"></use>
-      <use href="#flame" fill="#ff8e14" filter="url(#flameBlur)" transform="scale(0.9)"></use>
-      <use href="#flame" fill="#ffc414" filter="url(#flameBlur)" transform="scale(0.6)"></use>
-    </g>
-  </g>
   <line id="table" x1="0" y1="475" x2="1000" y2="710"></line>
   <g class="accDS4">
     <filter id="accDS4Glow"><feGaussianBlur in="SourceGraphic" stdDeviation="9"></feGaussianBlur></filter>
@@ -403,7 +364,7 @@
         -23 92 15 14 20 16 41 12 108 -7 104 -18 126 -62 126 -19 0 -40 -8 -49 -18z"
     ></path>
   </g>
-  <text id="description" x="500" y="100">Charmander is gaming.</text>
+  <text id="description" x="500" y="100">Bongo Cat is gaming.</text>
   <g id="signature">
     <path
       d="m16 0c-8.995 0-16.288 7.293-16.288 16.29c0 7.197 4.667 13.302 11.14 15.457c.815.149 1.112-.354 1.112-.786c0-.386-.014-1.411-.022-2.77c-4.531.984-5.487-2.184-5.487-2.184c-.741-1.881-1.809-2.382-1.809-2.382c-1.479-1.011.112-.991.112-.991c1.635.116 2.495 1.679 2.495 1.679c1.453 2.489 3.813 1.77 4.741 1.354c.148-1.053.568-1.771 1.034-2.178c-3.617-.411-7.42-1.809-7.42-8.051c0-1.778.635-3.232 1.677-4.371c-.168-.412-.727-2.068.159-4.311c0 0 1.368-.438 4.48 1.67c1.299-.361 2.693-.542 4.078-.548c1.383.006 2.777.187 4.078.548c3.11-2.108 4.475-1.67 4.475-1.67c.889 2.243.33 3.899.162 4.311c1.044 1.139 1.675 2.593 1.675 4.371c0 6.258-3.809 7.635-7.438 8.038c.585.503 1.106 1.497 1.106 3.017c0 2.177-.02 3.934-.02 4.468c0 .436.293.943 1.12.784c6.468-2.159 11.131-8.26 11.131-15.455c0-8.997-7.294-16.29-16.291-16.29"
