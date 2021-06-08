@@ -1,8 +1,9 @@
 @use 'sass:list';
+@use 'sass:math';
 @use '~/src/defs/values';
 
 @function beat($i) {
-    @return 100% * $i / 8;
+    @return math.percentage(math.div($i, 8));
 }
 
 // prettier-ignore
