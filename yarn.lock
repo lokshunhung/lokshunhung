@@ -2048,10 +2048,10 @@
     "@typescript-eslint/types" "4.14.1"
     eslint-visitor-keys "^2.0.0"
 
-"@vnus/prettier-config@0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@vnus/prettier-config/-/prettier-config-0.0.2.tgz#70e75fad0bc1059d160c1a3d66b6d25bf56a5d10"
-  integrity sha512-6/vqMDLeWGBUeSNTtsLPTPPWl55qs72nN6KXZ+TuShBztUUdj+RLXWhjADYQWZXhKGnPc0ntkR89+MsgQhW7Vw==
+"@vnus/prettier-config@0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@vnus/prettier-config/-/prettier-config-0.0.3.tgz#22b2f9409e68bfd9c5d7e3a9bef8d7c2442c5a52"
+  integrity sha512-KJJJ81EOvCrpjx+i53eVaRDx7zACwshV14JIKQPnOLPNRiF1RPEqDgyAI1ptDsOpxYnbc3OhNiA7KX53/zMmLQ==
 
 abab@^2.0.0:
   version "2.0.5"
@@ -6019,10 +6019,10 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
-prettier@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
-  integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
+prettier@2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.1.tgz#76903c3f8c4449bc9ac597acefa24dc5ad4cbea6"
+  integrity sha512-p+vNbgpLjif/+D+DwAZAbndtRrR0md0MwfmOVN9N+2RgyACMT+7tfaRnT+WDPkqnuVwleyuBIG2XBxKDme3hPA==
 
 pretty-format@^26.6.2:
   version "26.6.2"
