@@ -1,4 +1,4 @@
-import { colors } from '~/src/defs/values';
+import { colors } from "~/src/defs/values";
 
 const Tail = () => (
     <>

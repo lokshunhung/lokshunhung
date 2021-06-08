@@ -1,9 +1,9 @@
-import type { AccessoryType } from '~/src/assets/accessories';
-import { getAccessory } from '~/src/assets/accessories';
-import type { CharacterType } from '~/src/assets/cat';
-import { CatFace, CatHead, getCharacter, LPawDown, LPawUp, RPawDown, RPawUp } from '~/src/assets/cat';
-import { dimensions } from '~/src/defs/values';
-import { Svg } from './Svg';
+import type { AccessoryType } from "~/src/assets/accessories";
+import { getAccessory } from "~/src/assets/accessories";
+import type { CharacterType } from "~/src/assets/cat";
+import { CatFace, CatHead, getCharacter, LPawDown, LPawUp, RPawDown, RPawUp } from "~/src/assets/cat";
+import { dimensions } from "~/src/defs/values";
+import { Svg } from "./Svg";
 
 type ReadmeImageProps = {
     style?: React.CSSProperties;
@@ -15,7 +15,7 @@ export const ReadmeImage = ({ style, accessoryType, characterType }: ReadmeImage
     const { accessoryStyles, description, BeforeComponent, AfterComponent } = getAccessory(accessoryType);
     const { characterName, characterStyles, CharacterComponent } = getCharacter(characterType);
 
-    const inlineStyleSheet = [accessoryStyles, characterStyles, require('bundle-text:./ReadmeImage.scss')].join('\n\n');
+    const inlineStyleSheet = [accessoryStyles, characterStyles, require("bundle-text:./ReadmeImage.scss")].join("\n\n");
 
     return (
         <Svg viewBoxWidth={dimensions.width} viewBoxHeight={dimensions.height} style={style}>

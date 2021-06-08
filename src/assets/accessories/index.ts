@@ -1,13 +1,13 @@
-import { Bongo } from './Bongo';
-import { DualShock4 } from './DualShock4';
-import { EmergencyButton, EmergencyButtonText } from './EmergencyButton';
-import { HHKB } from './HHKB';
-import { Peach } from './Peach';
-import { Taiko } from './Taiko';
+import { Bongo } from "./Bongo";
+import { DualShock4 } from "./DualShock4";
+import { EmergencyButton, EmergencyButtonText } from "./EmergencyButton";
+import { HHKB } from "./HHKB";
+import { Peach } from "./Peach";
+import { Taiko } from "./Taiko";
 
-export const allAccessoryTypes = ['Bongo', 'DualShock4', 'EmergencyButton', 'HHKB', 'Peach', 'Taiko'] as const;
+export const allAccessoryTypes = ["Bongo", "DualShock4", "EmergencyButton", "HHKB", "Peach", "Taiko"] as const;
 
-export const defaultAccessoryType = 'DualShock4';
+export const defaultAccessoryType = "DualShock4";
 
 export type AccessoryType = typeof allAccessoryTypes[number];
 
@@ -22,45 +22,45 @@ const NullComponent = () => null;
 
 export const getAccessory = (type: AccessoryType): AccessorySet => {
     switch (type) {
-        case 'Bongo':
+        case "Bongo":
             return {
-                accessoryStyles: require('bundle-text:./Bongo.scss'),
-                description: 'playing bongos',
+                accessoryStyles: require("bundle-text:./Bongo.scss"),
+                description: "playing bongos",
                 BeforeComponent: Bongo,
                 AfterComponent: NullComponent,
             };
-        case 'DualShock4':
+        case "DualShock4":
             return {
-                accessoryStyles: require('bundle-text:./DualShock4.scss'),
-                description: 'gaming',
+                accessoryStyles: require("bundle-text:./DualShock4.scss"),
+                description: "gaming",
                 BeforeComponent: DualShock4,
                 AfterComponent: NullComponent,
             };
-        case 'EmergencyButton':
+        case "EmergencyButton":
             return {
-                accessoryStyles: require('bundle-text:./EmergencyButton.scss'),
-                description: 'playing Among Us',
+                accessoryStyles: require("bundle-text:./EmergencyButton.scss"),
+                description: "playing Among Us",
                 BeforeComponent: EmergencyButtonText,
                 AfterComponent: EmergencyButton,
             };
-        case 'HHKB':
+        case "HHKB":
             return {
-                accessoryStyles: require('bundle-text:./HHKB.scss'),
-                description: 'working',
+                accessoryStyles: require("bundle-text:./HHKB.scss"),
+                description: "working",
                 BeforeComponent: HHKB,
                 AfterComponent: NullComponent,
             };
-        case 'Peach':
+        case "Peach":
             return {
-                accessoryStyles: require('bundle-text:./Peach.scss'),
-                description: 'bored',
+                accessoryStyles: require("bundle-text:./Peach.scss"),
+                description: "bored",
                 BeforeComponent: Peach,
                 AfterComponent: NullComponent,
             };
-        case 'Taiko':
+        case "Taiko":
             return {
-                accessoryStyles: require('bundle-text:./Taiko.scss'),
-                description: 'playing Taiko no Tatsujin',
+                accessoryStyles: require("bundle-text:./Taiko.scss"),
+                description: "playing Taiko no Tatsujin",
                 BeforeComponent: Taiko,
                 AfterComponent: NullComponent,
             };
