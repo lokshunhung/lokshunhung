@@ -16,8 +16,8 @@
         "build": "parcel build src/build.tsx --no-scope-hoist --no-cache --no-source-maps --no-content-hash && node dist/build.js"
     },
     "dependencies": {
-        "react": "17.0.1",
-        "react-dom": "17.0.1"
+        "react": "17.0.2",
+        "react-dom": "17.0.2"
     },
     "devDependencies": {
         "@babel/core": "7.14.3",
