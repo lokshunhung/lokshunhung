@@ -1,4 +1,4 @@
-@use '~/src/defs/utils';
+@use "~/src/defs/utils";
 
 .lineDraw {
     @include utils.dynamic-color-property(fill, cat-outline);

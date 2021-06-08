@@ -1,6 +1,6 @@
-@use 'sass:list';
-@use 'sass:math';
-@use '~/src/defs/values';
+@use "sass:list";
+@use "sass:math";
+@use "~/src/defs/values";
 
 @function beat($i) {
     @return math.percentage(math.div($i, 8));

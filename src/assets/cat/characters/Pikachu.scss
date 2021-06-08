@@ -1,5 +1,5 @@
-@use '~/src/defs/values';
-@use '~/src/defs/utils';
+@use "~/src/defs/values";
+@use "~/src/defs/utils";
 
 .tailOutline {
     @include utils.dynamic-color-property(stroke, cat-outline);

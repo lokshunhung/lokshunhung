@@ -1,4 +1,4 @@
-@use './values';
+@use "./values";
 
 @mixin dynamic-color-property($property, $color-id) {
     $light-color: values.colors($color-id, light);
