@@ -6,27 +6,27 @@ text {
 }
 
 #background {
-    @include utils.dynamic-color-property(fill, bg);
     width: 100%;
     height: 100%;
+    @include utils.dynamic-color-property(fill, bg);
 }
 
 #table {
-    @include utils.dynamic-color-property(stroke, outline);
     stroke-width: 10px;
+    @include utils.dynamic-color-property(stroke, outline);
 }
 
 #description {
-    @include utils.dynamic-color-property(fill, text);
     font-size: 2em;
     font-weight: bolder;
     dominant-baseline: middle;
     text-anchor: middle;
+    @include utils.dynamic-color-property(fill, text);
 }
 
 #signature {
-    @include utils.dynamic-color-property(fill, text);
     transform: translate(760px, 940px);
+    @include utils.dynamic-color-property(fill, text);
     path {
         fill-rule: evenodd;
         stroke: none;

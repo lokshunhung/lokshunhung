@@ -1,12 +1,12 @@
-@use '~/src/defs/utils';
-@use '~/src/defs/values';
+@use "~/src/defs/utils";
+@use "~/src/defs/values";
 
 .accTaiko {
     transform: scale(2);
 
     .body {
-        @include utils.dynamic-color-property(fill, tk-body);
         fill: values.colors(tk-body);
+        @include utils.dynamic-color-property(fill, tk-body);
     }
 
     .rim {
@@ -20,7 +20,7 @@
 
     .bodyOutline,
     .topOutline {
-        @include utils.dynamic-color-property(stroke, tk-outline);
         fill: none;
+        @include utils.dynamic-color-property(stroke, tk-outline);
     }
 }

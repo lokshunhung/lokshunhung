@@ -9,7 +9,7 @@ export const allAccessoryTypes = ["Bongo", "DualShock4", "EmergencyButton", "HHK
 
 export const defaultAccessoryType = "DualShock4";
 
-export type AccessoryType = typeof allAccessoryTypes[number];
+export type AccessoryType = (typeof allAccessoryTypes)[number];
 
 export type AccessorySet = {
     accessoryStyles: string;

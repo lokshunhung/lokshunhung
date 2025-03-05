@@ -14,39 +14,25 @@
     },
     "scripts": {
         "start": "parcel serve src/index.html --no-autoinstall",
-        "format": "prettier --write \"**/*.{css,html,js,json,jsx,ts,tsx}\"",
-        "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+        "format": "prettier --write \"**/*.{css,html,js,json,jsx,scss,ts,tsx}\"",
         "build": "parcel build src/build.tsx --no-scope-hoist --no-cache --no-source-maps --no-content-hash && node dist/build.js"
     },
     "dependencies": {
-        "prettier": "2.5.1",
-        "react": "17.0.2",
-        "react-dom": "17.0.2"
+        "prettier": "3.5.3",
+        "react": "19.0.0",
+        "react-dom": "19.0.0"
     },
     "devDependencies": {
-        "@parcel/optimizer-data-url": "2.3.2",
-        "@parcel/transformer-inline-string": "2.3.2",
-        "@parcel/transformer-sass": "2.3.2",
-        "@types/node": "17.0.21",
-        "@types/prettier": "2.4.4",
-        "@types/react": "17.0.39",
-        "@types/react-dom": "17.0.11",
+        "@parcel/optimizer-data-url": "2.13.3",
+        "@parcel/transformer-inline-string": "2.13.3",
+        "@parcel/transformer-sass": "2.13.3",
+        "@types/node": "22.13.9",
+        "@types/react": "19.0.10",
+        "@types/react-dom": "19.0.4",
         "@vnus/prettier-config": "0.0.3",
-        "eslint": "7.28.0",
-        "eslint-config-vnus": "0.0.7",
-        "parcel": "2.3.2",
-        "sass": "1.49.8",
-        "typescript": "4.3.2"
+        "parcel": "2.13.3",
+        "sass": "1.85.1",
+        "typescript": "5.8.2"
     },
-    "prettier": "@vnus/prettier-config",
-    "eslintConfig": {
-        "ignorePatterns": "dist/**",
-        "extends": "vnus/presets/react",
-        "parserOptions": {
-            "project": "./tsconfig.json"
-        },
-        "rules": {
-            "@typescript-eslint/prefer-readonly-parameter-types": "off"
-        }
-    }
+    "prettier": "@vnus/prettier-config"
 }

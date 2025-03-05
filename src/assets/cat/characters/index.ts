@@ -5,7 +5,7 @@ export const allCharacterTypes = ["BongoCat", "Charmander", "Pikachu"] as const;
 
 export const defaultCharacterType = "Charmander";
 
-export type CharacterType = typeof allCharacterTypes[number];
+export type CharacterType = (typeof allCharacterTypes)[number];
 
 export type CharacterSet = {
     characterName: string;

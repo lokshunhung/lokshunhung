@@ -4,7 +4,9 @@
     $light-color: values.colors($color-id, light);
     $dark-color: values.colors($color-id, dark);
 
-    #{$property}: $light-color;
+    & {
+        #{$property}: $light-color;
+    }
 
     @media (prefers-color-scheme: dark) {
         #{$property}: $dark-color;
